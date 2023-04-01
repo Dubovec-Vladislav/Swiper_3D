@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-family: "Della Respira", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+.showcase-carousel__item, .showcase-carousel .swiper-wrapper {
+  -webkit-transition: 2s cubic-bezier(0.4, 0, 0, 1);
+  transition: 2s cubic-bezier(0.4, 0, 0, 1);
+}
+
+body,
+html {
+  height: 100%;
+}
+
+.showcase {
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.showcase__header {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  top: 40px;
+  z-index: 1;
+  font-size: 32px;
+  text-align: center;
+}
+.showcase__header zz span {
+  color: #CC8869;
+}
+.showcase__content-wrapper {
+  position: relative;
+  height: 100%;
+  z-index: 2;
+  padding: 120px 0;
+}
+.showcase__content-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/glow.png) center/cover no-repeat;
+  -webkit-animation: glow 1.8s ease-in-out infinite;
+          animation: glow 1.8s ease-in-out infinite;
+}
+@-webkit-keyframes glow {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+@keyframes glow {
+  0% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+.showcase__content {
+  margin: 0 100px;
+}
+.showcase__video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.45;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcase::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-box-shadow: inset 0 0 500px #000;
+          box-shadow: inset 0 0 500px #000;
+}
+.showcase::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../img/light.png) center -65px/cover no-repeat;
+  -webkit-animation: light 3s ease-in-out infinite;
+          animation: light 3s ease-in-out infinite;
+}
+@-webkit-keyframes light {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+@keyframes light {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.showcase-carousel__item {
+  position: relative;
+  height: calc(100vh - 240px);
+  text-align: center;
+}
+.showcase-carousel__item.swiper-slide {
+  opacity: 0.35;
+  -webkit-transform: scale(0.65);
+          transform: scale(0.65);
+}
+.showcase-carousel__item.swiper-slide-active {
+  opacity: 0.9;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+.showcase-carousel__item p {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.75);
+  width: 100%;
+  bottom: -80px;
+  font-size: 32px;
+  text-align: center;
+  text-shadow: rgb(65, 97, 123) 0 0 15px;
+}
+.showcase-carousel__item::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 0;
+  bottom: -5px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0px);
+          transform: translate(-50%, 0px);
+  -webkit-box-shadow: 0 0 45px 15px #010101;
+          box-shadow: 0 0 45px 15px #010101;
+}
+.showcase-carousel__image-left, .showcase-carousel__image-right {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-perspective: 150px;
+          perspective: 150px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+.showcase-carousel__image-left {
+  -webkit-perspective-origin: right center;
+          perspective-origin: right center;
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+.showcase-carousel__image-left .showcase-carousel__image {
+  -webkit-animation: left-side 2s ease-in-out infinite alternate;
+          animation: left-side 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes left-side {
+  0% {
+    -webkit-transform: rotateY(-1deg) scaleX(0.92);
+            transform: rotateY(-1deg) scaleX(0.92);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) scaleX(1);
+            transform: rotateY(0deg) scaleX(1);
+  }
+}
+@keyframes left-side {
+  0% {
+    -webkit-transform: rotateY(-1deg) scaleX(0.92);
+            transform: rotateY(-1deg) scaleX(0.92);
+  }
+  100% {
+    -webkit-transform: rotateY(0deg) scaleX(1);
+            transform: rotateY(0deg) scaleX(1);
+  }
+}
+.showcase-carousel__image-right {
+  -webkit-perspective-origin: left center;
+          perspective-origin: left center;
+  -webkit-clip-path: polygon(49% 0, 100% 0, 100% 100%, 49% 100%);
+          clip-path: polygon(49% 0, 100% 0, 100% 100%, 49% 100%);
+}
+.showcase-carousel__image-right .showcase-carousel__image {
+  -webkit-animation: right-side 2s ease-in-out infinite alternate;
+          animation: right-side 2s ease-in-out infinite alternate;
+}
+@-webkit-keyframes right-side {
+  0% {
+    -webkit-transform: rotateY(0deg) scaleX(1);
+            transform: rotateY(0deg) scaleX(1);
+  }
+  100% {
+    -webkit-transform: rotateY(1deg) scaleX(0.92);
+            transform: rotateY(1deg) scaleX(0.92);
+  }
+}
+@keyframes right-side {
+  0% {
+    -webkit-transform: rotateY(0deg) scaleX(1);
+            transform: rotateY(0deg) scaleX(1);
+  }
+  100% {
+    -webkit-transform: rotateY(1deg) scaleX(0.92);
+            transform: rotateY(1deg) scaleX(0.92);
+  }
+}
+.showcase-carousel__image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
